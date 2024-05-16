@@ -1,4 +1,5 @@
-import { Layout, Row, Typography } from 'antd';
+import { Layout, Typography } from 'antd';
+import { Row } from 'antd-v2';
 import React from 'react';
 import styles from './Guide.less';
 

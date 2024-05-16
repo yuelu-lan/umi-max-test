@@ -7,7 +7,8 @@ import {
   ProDescriptionsItemProps,
   ProTable,
 } from '@ant-design/pro-components';
-import { Button, Divider, Drawer, message } from 'antd';
+import { Divider, Drawer } from 'antd';
+import { Button, message } from 'antd-v2';
 import React, { useRef, useState } from 'react';
 import CreateForm from './components/CreateForm';
 import UpdateForm, { FormValueType } from './components/UpdateForm';
@@ -179,6 +180,7 @@ const TableList: React.FC<unknown> = () => {
           onChange: (_, selectedRows) => setSelectedRows(selectedRows),
         }}
       />
+
       {selectedRowsState?.length > 0 && (
         <FooterToolbar
           extra={
@@ -201,6 +203,7 @@ const TableList: React.FC<unknown> = () => {
           <Button type="primary">批量审批</Button>
         </FooterToolbar>
       )}
+
       <CreateForm
         onCancel={() => handleModalVisible(false)}
         modalVisible={createModalVisible}

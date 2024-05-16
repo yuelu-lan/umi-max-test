@@ -59,6 +59,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => (
         label="规则名称"
         rules={[{ required: true, message: '请输入规则名称！' }]}
       />
+
       <ProFormTextArea
         name="desc"
         width="md"
@@ -85,6 +86,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => (
           1: '表二',
         }}
       />
+
       <ProFormSelect
         width="md"
         name="template"
@@ -94,6 +96,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => (
           1: '规则模板二',
         }}
       />
+
       <ProFormRadio.Group
         name="type"
         width="md"
@@ -122,6 +125,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => (
         label="开始时间"
         rules={[{ required: true, message: '请选择开始时间！' }]}
       />
+
       <ProFormSelect
         name="frequency"
         label="监控对象"
