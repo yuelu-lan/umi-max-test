@@ -21,11 +21,14 @@ const dirHandle = (dirPath: string) => {
       continue;
     }
 
-    console.log('🚀 ~ dirHandle ~ fillPath:', fillPath);
-
     let isChange: boolean = false;
+
     const { code } =
       transformFileSync(fillPath, {
+        // 不要包含多余的空白字符和行结束符。
+        compact: false,
+        // 保留行号。（会保留空白行，推荐在不使用 source-map 时使用）
+        retainLines: true,
         parserOpts: {
           /**
            * 配置语法插件
@@ -54,6 +57,7 @@ const dirHandle = (dirPath: string) => {
       }) ?? {};
 
     if (isChange) {
+      console.log('🚀 ~ dirHandle ~ fillPath:', fillPath);
       // console.log('🚀 ~ dirHandle ~ code:', code);
 
       fs.writeFileSync(fillPath, code ?? '');
