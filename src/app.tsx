@@ -1,3 +1,6 @@
+import { ConfigProvider as ConfigProvider5 } from 'antd';
+import React from 'react';
+
 // 运行时配置
 
 // 全局初始化数据配置，用于 Layout 用户信息和权限初始化
@@ -14,3 +17,11 @@ export const layout = () => {
     },
   };
 };
+
+export function rootContainer(container: React.ReactNode) {
+  return (
+    <ConfigProvider5 prefixCls="ant5" iconPrefixCls="ant5-icon">
+      {container}
+    </ConfigProvider5>
+  );
+}

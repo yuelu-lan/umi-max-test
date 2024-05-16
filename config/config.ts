@@ -16,4 +16,13 @@ export default defineConfig({
   mfsu: {
     exclude: ['lodash'],
   },
+  extraBabelPlugins: [
+    [
+      'import',
+      {
+        libraryName: 'antd-v2',
+        style: 'css', // `style: true` 会加载 less 文件
+      },
+    ],
+  ],
 });
