@@ -12,4 +12,8 @@ export default defineConfig({
   },
   routes,
   npmClient: 'pnpm',
+  // NOTE: https://umijs.org/docs/guides/mfsu#worker-%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98
+  mfsu: {
+    exclude: ['lodash'],
+  },
 });
