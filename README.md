@@ -5,3 +5,4 @@
 ## content
 
 - 使用 web workers API
+- 新增简版 import-change 脚本（将项目中导入的 antd 改为 antd-v2）
